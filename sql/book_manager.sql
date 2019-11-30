@@ -19,7 +19,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
 # Dump of table author
 # ------------------------------------------------------------
 
@@ -50,7 +49,7 @@ LOCK TABLES `author` WRITE;
 
 INSERT INTO `author` (`id`, `name`, `email`, `mobile`, `address`, `birthdate`, `country`, `background`, `biography`, `nickname`, `created`, `updated`, `created_by`, `updated_by`, `status`, `photo_url`)
 VALUES
-	(1,'Sanjoy Kumer Deb','sanjoyd.cse@gmail.com','01719149840',NULL,'2019-07-21',NULL,NULL,NULL,NULL,NULL,NULL,'rrr',NULL,'ACTIVE',NULL),
+	(1,'Sanjoy Kumer Deb test','sanjoyd.cse@gmail.com','01719149840',NULL,'2019-07-21',NULL,NULL,NULL,NULL,NULL,NULL,'rrr',NULL,'ACTIVE',NULL),
 	(2,'Sanjoy Kumer Deb','sanjoyd.cse@gmail.com','01719149840',NULL,'2019-07-21',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ACTIVE',NULL),
 	(3,'Sanjoy Kumer Deb','sanjoyd.cse@gmail.com','01719149840','Dhaka','1988-12-12','BD','BB','BB','kjkjl',NULL,'2019-07-27 11:23:42',NULL,NULL,'ACTIVE',NULL),
 	(4,'','sanjoyd.cse@gmail.com','01719149840',NULL,'2019-07-21',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'ACTIVE',NULL),
