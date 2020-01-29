@@ -1,32 +1,20 @@
 version: '3'
 services:
-  docker-mysql:
-    restart: always
-    container_name: docker-mysql
-    image: mysql
-    environment:
-      MYSQL_DATABASE: book_manager
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
-    volumes:
-      - ./sql:/docker-entrypoint-initdb.d
-
-    ports:
-      - "6033:3306"
-    healthcheck:
-      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
-      interval: 2s
-      timeout: 20s
-      retries: 10
-
   book-manager-app:
-    restart: on-failure
+    restart: always
     build: ./
+    image: flopcoder/book-manager
+    networks:
+      - book_network
     expose:
       - "10222"
+    environment:
+      MYSQL_DATABASE: book_manager
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
     ports:
       - 10222:10222
-    environment:
-      WAIT_HOSTS: mysql:3306
-    depends_on:
-      - docker-mysql
+networks:
+  book_network:
+    driver: overlay
