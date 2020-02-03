@@ -8,11 +8,6 @@ services:
       - book_network
     expose:
       - "10222"
-    environment:
-      MYSQL_DATABASE: book_manager
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
     ports:
       - 10222:10222
 networks:
